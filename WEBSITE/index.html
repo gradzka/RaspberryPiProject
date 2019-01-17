@@ -1,0 +1,55 @@
+<!-- based on: https://github.com/taniarascia/sandbox/tree/master/ghibli -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- <meta charset="UTF-8" > -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Raspberry Pi 3 Info</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <div id="root"><img src="raspberry-pi-logo.png">
+    <div class="container">
+        <div class="card">
+          <h1>Processor temperature</h1>
+          <p id="temperatureDisplay">No data</p>
+        </div>
+        <div class="card">
+          <h1>Processor percentage usage</h1>
+          <p id="processorUsage">No data</p>
+      </div>
+        <div class="card">
+          <h1>RAM percentage usage</h1>
+          <p id="RAMUsage">No data</p>
+      </div>
+      <div class="card">
+          <h1>Gyroscope registers values</h1>
+          <p id="RegX" class="gyroscope_p">No data</p>
+          <p id="RegY" class="gyroscope_p">No data</p>
+          <p id="RegZ" class="gyroscope_p">No data</p>
+      </div>
+      <div class="card">
+        <h1>Diode toggling</h1>
+        <div class="divx">
+          <label class="switch">
+            <input type="checkbox" onchange="toggle_button(this)">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="card">
+        <h1>Frame capturing</h1>
+        <img alt="Captured frame" class="video_frame" id="capturedFrameDisplay" src="" width="40%" height="auto">
+        <!--<button class="button button1" onclick="capture_frame()">Capture frame</button>-->
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
