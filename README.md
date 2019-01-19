@@ -21,7 +21,7 @@ Served by nginx server, based on Flask server, show information (refreshed every
 - Gyroscope registers values.
 Enables to toggle diode state by slider and stream live video from camera module.
 
-![Web page presentation](https://github.com/gradzka/...)
+![Web page presentation](https://github.com/gradzka/RaspberryPiProject/blob/master/web_page.png)
 
 ### How to connect?
 ```
