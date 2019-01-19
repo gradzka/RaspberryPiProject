@@ -2,27 +2,26 @@
 
 ## Overview
 Project with Raspberry Pi 3 B+:
-- MQTT communication between 2 subscribers (share data about LED and switch state) with Mosquitto broker,
-- testing external modules with Raspberry Pi: gyroscope, switches & LEDs and camera. Gathered data is displayed on web page using Flask server.
+- MQTT Communication between 2 subscribers (share data about LED and switch state) with Mosquitto broker,
+- Testing external modules with RaspberryPi: gyroscope, switches & LEDs and camera. Gathered data is displayed on web page using Flask server.
 
 ## Description
 Features was tested on Raspberry Pi 3 B+  with Arch Linux ARM on SD card.
 
 ### MQTT Communication
-- subscriber 1 publish information for toggling diode state and subscribe topic about switch state,
-- subscriber 2 publish information about actual switch state and subscribe topic about toggling diode,
+- Subscriber 1 publish information for toggling diode state and subscribe topic about switch state,
+- Subscriber 2 publish information about actual switch state and subscribe topic about toggling diode,
 - Mosquitto broker installed on external device.
 
 ### Web page
-Served by nginx server, based on Flask server, show information (refreshed once per second) about:
+Served by nginx server, based on Flask server, show information (refreshed every second) about:
 - processor temperature,
 - processor percentage usage,
 - RAM percentage usage,
-- gyroscope registers values.
-
+- Gyroscope registers values.
 Enables to toggle diode state by slider and stream live video from camera module.
 
-![Web page presentation](https://github.com/gradzka/RaspberryPiProject/blob/master/web_page.png)
+![Web page presentation](https://github.com/gradzka/...)
 
 ### How to connect?
 ```
@@ -40,6 +39,10 @@ Ground <---> GND
 Raspberry Pi <---> Camera Module V2
 CSI Camera Connector <---> ribbon cable
 ```
+
+## How to use with Docker
+- bulid: sudo docker build -t raspberry_pi_project <path_to_Dockerfile>
+- run: sudo docker run -it -p 1247:1247 -p 80:80 --device /dev/i2c-1 --device /dev/vchiq --device /dev/gpiomem raspberry_pi_project
 
 ## Attributions
 - https://github.com/Mjrovai/Video-Streaming-with-Flask/blob/master/camWebServer/camera_pi.py
