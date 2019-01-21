@@ -22,7 +22,7 @@ def on_message(client, userdata, message):
 
 
 Connected = False  # global variable for the state of the connection
-broker_address = "192.168.1.104"  # Broker address
+broker_address = "192.168.1.112"  # Broker address
 port = 1883  # Broker port
 client = mqttClient.Client("S1")  # create new instance
 client.on_connect = on_connect  # attach function to callback

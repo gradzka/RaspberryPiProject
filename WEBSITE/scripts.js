@@ -1,6 +1,6 @@
-TM07 = "http://tm07:1247"
+TM07 = "http://tm07:1247/"
 //TM07 = "http://192.168.43.197:1247/"
-
+// TM07 = "http://192.168.1.115:1247/"
 document.getElementById("capturedFrameDisplay").src = TM07 + "get_video";
 
 setInterval(function() {
